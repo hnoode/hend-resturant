@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <title>Online Food Ordering and Deliveries,Takeaways, Pickups, with Preorders</title>
 
@@ -48,77 +47,33 @@
     <div class="main-content" style="background-color:#e74c3c">
         <div class="container">
             <div class="" style="padding-top: 50px;">
-
-                <!-- VIEW CART button code. -->
-                <a href="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2&
-merchant_id=your_google_merchant_id&business=your_paypal_email" target="ej_ejc" class="ec_ejc_thkbx"
-                   onClick="return EJEJC_lc(this);"><img src="https://www.e-junkie.com/ej/ej_view_cart.gif" border="0"></a>
-                <script language="javascript" type="text/javascript">
-                    <!--
-                    function EJEJC_lc(th) {
-                        return false;
-                    }
-                    // -->
-                </script>
-                <script type="text/javascript"
-                        src="https://www.e-junkie.com/ecom/box.js"></script>
-
                 <h1 class="page-header smallen"
                     style="font-weight: 500; font-family: 'open_sanslight', Verdana; margin-bottom:20px; color: white; text-align: center;">
-                    Order Drinks online
+                    Order food online
                 </h1>
             </div>
         </div>
     </div>
+
+
     <section class='sub-content' style="padding: 100px;">
-        <div class="container" style="padding: 10px;">
-            <nav id="cuisine" style="padding: 15px;">
-                <div class="row" style="padding:50px 0px;">
-                    <div class="col-sm-6 gap-col-top">
-                        <div>
-                            <img src="drinks.jpg" style="padding:20px;" alt="Drinks">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 gap-col-top">
-                        <div style="padding:50px 20px;">
-                            <h1>Drink 1 name</h1>
-                            <span>Some detailes of drink 1</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding:50px 0px;">
-                    <div class="col-sm-6 gap-col-top">
-                        <div>
-                            <img src="drinks.jpg" style="padding:20px;" alt="Drinks">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 gap-col-top">
-                        <div style="padding:50px 20px;">
-                            <h1>Drink 2 name</h1>
-                            <span>Some detailes of drink 2</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding:50px 0px;">
-                    <div class="col-sm-6 gap-col-top">
-                        <div>
-                            <img src="drinks.jpg" style="padding:20px;" alt="Drinks">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 gap-col-top">
-                        <div style="padding:50px 20px;">
-                            <h1>Drink 3 name</h1>
-                            <span>Some detailes of drink 3</span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+        <div class="container" style="padding: 10px; border:solid #b3ada9">
+            <div class="row"
+                 style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                <h1 class="col-sm-12 gap-col-top"
+                    style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">your Information</h1>
+            </div>
         </div>
+        Name:  <?php echo $_POST["name"] ;?> .<br>
+        E-mail: <?php echo $_POST["email"] ;?>
     </section>
-    <div class="footer-html"></div>
-    <div class="bottom-listings" style="">
-        <div class="" style="text-align: center;"></div>
-    </div>
+</div>
+
+
+<div class="footer-html"></div>
+<div class="bottom-listings" style="">
+    <div class="" style="text-align: center;"></div>
+</div>
 </div>
 <footer class>
     <div class="container">
@@ -163,5 +118,6 @@ merchant_id=your_google_merchant_id&business=your_paypal_email" target="ej_ejc" 
         </div>
     </div>
 </footer>
+
 </body>
 </html>

@@ -62,29 +62,32 @@
                 <h1 class="col-sm-12 gap-col-top"
                     style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">Login</h1>
             </div>
-            <div class="row"
-                 style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
-                <div class="col-sm-12 gap-col-top">
-                    <input type="email"
-                           style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
-                           name="email" placeholder="E-mail"/>
+
+            <form action="sign_in.php" method="POST">
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="email"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="email" placeholder="E-mail"/>
+                    </div>
                 </div>
-            </div>
-            <div class="row"
-                 style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
-                <div class="col-sm-12 gap-col-top">
-                    <input type="password"
-                           style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
-                           name="password" placeholder="Password"/>
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="password"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="password" placeholder="Password"/>
+                    </div>
                 </div>
-            </div>
-            <div class="row" style="padding: 25px 10px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
-                <div class="col-sm-12 gap-col-top">
-                    <input type="button"
-                           style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #444444; padding: 10px 0px;font-family: 'open_sanslight'; font-size:20px;"
-                           name="login" value="Login">
+                <div class="row" style="padding: 25px 10px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="submit"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #444444; padding: 10px 0px;font-family: 'open_sanslight'; font-size:20px;"
+                               name="login" value="Login">
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
     <div class="footer-html"></div>
