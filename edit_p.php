@@ -1,10 +1,5 @@
-<?php
-$name = $_POST["name"];
-$email = $_POST["email"];
-
-
-?>
 <html>
+
 <head>
     <title>Online Food Ordering and Deliveries,Takeaways, Pickups, with Preorders</title>
 
@@ -28,14 +23,28 @@ $email = $_POST["email"];
                class="navbar-brand navbar-brand-top loadingText_mini" href="index.html">
                 <img src="logo.png" style="max-height: 36px; margin-top: 2px;"/>
             </a>
+
+
             <nav style="float: right; display: block;" class="hp-topbar">
                 <ul style="list-style: none; margin-top: 5px;">
+
+
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="registration.php">Register</a>
+                        <a class="" href="logout.php">Siqn out</a>
                     </li>
-                    <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="login.html">Login</a>
-                    </li>
+                    <li style="float: left; margin-right: 32px;" class="hide_on_tablet"><a href="https://www.e-junkie.com/ecom/fgb.php?c=cart&cl=1&ejc=2&
+merchant_id=your_google_merchant_id&business=your_paypal_email" target="ej_ejc" class="ec_ejc_thkbx"
+                                                                                           onClick="return EJEJC_lc(this);">View
+                            cart</a></li>
+                    <script language="javascript" type="text/javascript">
+                        <!--
+                        function EJEJC_lc(th) {
+                            return false;
+                        }
+                        // -->
+                    </script>
+                    <script type="text/javascript"
+                            src="https://www.e-junkie.com/ecom/box.js"></script>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;" class="hide_on_tablet">
                         <a class="" href="menu.html">Menu</a>
                     </li>
@@ -43,46 +52,55 @@ $email = $_POST["email"];
                         <a class="" href="#">About Us</a>
                     </li>
                 </ul>
+
             </nav>
 
             <div style="clear: both"></div>
         </div>
     </div>
 </nav>
+
 <div class="" style="padding: 0px;">
     <div class="main-content" style="background-color:#e74c3c">
         <div class="container">
             <div class="" style="padding-top: 50px;">
+
+
+                <!-- VIEW CART button code. -->
+
+                <br>
                 <h1 class="page-header smallen"
                     style="font-weight: 500; font-family: 'open_sanslight', Verdana; margin-bottom:20px; color: white; text-align: center;">
+                    your profile
                 </h1>
             </div>
         </div>
     </div>
-
-
     <section class='sub-content' style="padding: 100px;">
-        <div class="container" style="padding: 10px; border:solid #b3ada9">
-            <div class="row"
-                 style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
-                <h1 class="col-sm-12 gap-col-top"
-                    style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">your Information</h1>
-            </div>
+        <div class="container" style="padding: 10px;">
+            <nav id="cuisine_shortcuts" style="padding: 15px;">
+
+                <caption><h1>Edit Your Profile</h1></caption>
+                <hr>
+                <form method="POST" action="editu.php">
+
+                    <p><label>Username: <input name="name" type="text"></label><br>
+
+                    <p><label>Email: <input name="email" type="email"></label><br>
+
+                    <p><label>Password: <input name="password" type="password"></label><br>
+
+
+                        <input type="submit" value="Edit" name="submit"><br>
+
+                    <div><a href="profile.php">Back</a><br></div>
+            </nav>
         </div>
-        <h3> Name: <?php echo $_POST["name"]; ?><br>
-            E-mail: <?php echo $_POST["email"]; ?>
-
-        </h3>
-
-        <h2>Thank you for your registration .. </h2>
     </section>
-</div>
-
-
-<div class="footer-html"></div>
-<div class="bottom-listings" style="">
-    <div class="" style="text-align: center;"></div>
-</div>
+    <div class="footer-html"></div>
+    <div class="bottom-listings" style="">
+        <div class="" style="text-align: center;"></div>
+    </div>
 </div>
 <footer class>
     <div class="container">
@@ -127,6 +145,5 @@ $email = $_POST["email"];
         </div>
     </div>
 </footer>
-
 </body>
 </html>

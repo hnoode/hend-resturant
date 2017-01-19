@@ -1,10 +1,31 @@
 <?php
-$name = $_POST["name"];
-$email = $_POST["email"];
+
+session_start(); // Starting Session
+
+$connect = mysqli_connect("localhost", "root", "") or die ("couldn't connect");
+mysqli_select_db($connect, "hend resturant") or die ("couldn't find db");
 
 
+if (isset($_POST['submit'])) {
+    $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $email = mysqli_real_escape_string($connect, $_POST['email']);
+    $pass = mysqli_real_escape_string($connect, $_POST['password']);
+
+    if (mysqli_query($connect, "INSERT INTO customers(name,email,password) VALUES('$name','$email','$pass')")) {
+
+        ?>
+        <script>alert('successfully registered ');</script>
+        <?php
+    } else {
+        ?>
+        <script>alert('error while registering you...');</script>
+        <?php
+    }
+}
 ?>
+
 <html>
+
 <head>
     <title>Online Food Ordering and Deliveries,Takeaways, Pickups, with Preorders</title>
 
@@ -34,10 +55,10 @@ $email = $_POST["email"];
                         <a class="" href="registration.php">Register</a>
                     </li>
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="login.html">Login</a>
+                        <a class="" href="login.php">Login</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="menu.html">Menu</a>
+                        <a class="" href="menu_F.html">Menu</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;">
                         <a class="" href="#">About Us</a>
@@ -55,34 +76,70 @@ $email = $_POST["email"];
             <div class="" style="padding-top: 50px;">
                 <h1 class="page-header smallen"
                     style="font-weight: 500; font-family: 'open_sanslight', Verdana; margin-bottom:20px; color: white; text-align: center;">
+                    <br>
                 </h1>
             </div>
         </div>
     </div>
-
-
     <section class='sub-content' style="padding: 100px;">
         <div class="container" style="padding: 10px; border:solid #b3ada9">
             <div class="row"
                  style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
                 <h1 class="col-sm-12 gap-col-top"
-                    style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">your Information</h1>
+                    style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">Registration</h1>
             </div>
+            <form method="post">
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="text"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="name" placeholder="your name"/>
+                    </div>
+                </div>
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="email"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="email" placeholder="E-mail"/>
+                    </div>
+                </div>
+
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="password"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="password" placeholder="Password"/>
+                    </div>
+                </div>
+                <div class="row"
+                     style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="password"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #000000; background: white;padding: 10px 5px;font-family: 'open_sanslight';"
+                               name="cpassword" placeholder="Confirm Password"/>
+                    </div>
+                </div>
+
+                <div class="row" style="padding: 25px 10px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-12 gap-col-top">
+                        <input type="submit"
+                               style="border-radius: 5px; width:100%; text-shadow: 2px 2px 9px #444444; padding: 10px 0px;font-family: 'open_sanslight'; font-size:20px;"
+                               name="submit" value="submit">
+                    </div>
+                </div>
+
+
+            </form>
         </div>
-        <h3> Name: <?php echo $_POST["name"]; ?><br>
-            E-mail: <?php echo $_POST["email"]; ?>
-
-        </h3>
-
-        <h2>Thank you for your registration .. </h2>
     </section>
-</div>
 
-
-<div class="footer-html"></div>
-<div class="bottom-listings" style="">
-    <div class="" style="text-align: center;"></div>
-</div>
+    <div class="footer-html"></div>
+    <div class="bottom-listings" style="">
+        <div class="" style="text-align: center;"></div>
+    </div>
 </div>
 <footer class>
     <div class="container">
@@ -113,6 +170,7 @@ $email = $_POST["email"];
             </div>
         </div>
     </div>
+    </section>
     <div class="footer-after">
         <div class="container">
             <div class="row">
@@ -127,6 +185,10 @@ $email = $_POST["email"];
         </div>
     </div>
 </footer>
-
 </body>
 </html>
+
+
+
+
+

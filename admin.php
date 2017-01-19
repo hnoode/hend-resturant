@@ -25,14 +25,19 @@
             </a>
             <nav style="float: right; display: block;" class="hp-topbar">
                 <ul style="list-style: none; margin-top: 5px;">
+
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="registration.php">Register</a>
+                        <a class="" href="logout.php">Siqn out</a>
+                    </li>
+
+                    <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
+                        <a class="" href="admin_view.php">View customers</a>
                     </li>
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="login.php">Login</a>
+                        <a class="" href="admin_view_m.php">View Item</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="menu_F.html">Menu</a>
+                        <a class="" href="admin_menu.php">Menu</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;">
                         <a class="" href="#">About Us</a>

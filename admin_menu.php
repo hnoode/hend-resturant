@@ -1,10 +1,5 @@
-<?php
-$name = $_POST["name"];
-$email = $_POST["email"];
-
-
-?>
 <html>
+
 <head>
     <title>Online Food Ordering and Deliveries,Takeaways, Pickups, with Preorders</title>
 
@@ -28,61 +23,81 @@ $email = $_POST["email"];
                class="navbar-brand navbar-brand-top loadingText_mini" href="index.html">
                 <img src="logo.png" style="max-height: 36px; margin-top: 2px;"/>
             </a>
+
+
             <nav style="float: right; display: block;" class="hp-topbar">
                 <ul style="list-style: none; margin-top: 5px;">
+
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="registration.php">Register</a>
+                        <a class="" href="logout.php">Siqn out</a>
+                    </li>
+
+                    <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
+                        <a class="" href="admin_view.php">View customers</a>
                     </li>
                     <li style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="login.html">Login</a>
+                        <a class="" href="admin_view_m.php">View Item</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;" class="hide_on_tablet">
-                        <a class="" href="menu.html">Menu</a>
+                        <a class="" href="admin_menu.php">Menu</a>
                     </li>
                     <li class="hide-on-mobile" style="float: left; margin-right: 32px;">
                         <a class="" href="#">About Us</a>
                     </li>
                 </ul>
+
             </nav>
 
             <div style="clear: both"></div>
         </div>
     </div>
 </nav>
+
 <div class="" style="padding: 0px;">
     <div class="main-content" style="background-color:#e74c3c">
         <div class="container">
             <div class="" style="padding-top: 50px;">
+
+                <br>
+                <br>
                 <h1 class="page-header smallen"
                     style="font-weight: 500; font-family: 'open_sanslight', Verdana; margin-bottom:20px; color: white; text-align: center;">
+                    Order food online
                 </h1>
             </div>
         </div>
     </div>
-
-
     <section class='sub-content' style="padding: 100px;">
-        <div class="container" style="padding: 10px; border:solid #b3ada9">
-            <div class="row"
-                 style="padding: 10px; padding-top: 25px; margin-bottom: 15px; margin-left: 0px; margin-right: 0px;">
-                <h1 class="col-sm-12 gap-col-top"
-                    style="color:#444444; text-align: center;text-shadow: 2px 2px 9px #AAAAAA;">your Information</h1>
-            </div>
+        <div class="container" style="padding: 10px;">
+            <nav id="cuisine_shortcuts" style="padding: 15px;">
+                <div class="row" style="padding:50px 0px;">
+                    <div class="col-sm-6 gap-col-top">
+                        <div class="thumb">
+                            <a data-cuisine="drinks" class="thumbnail" href="drinks_admin.php" title="Drinks"
+                               target="_top"
+                               ua-action="Drinks" ua-label="Drinks">
+                                <img src="drinks.jpg" alt="Drinks">
+                                <span>Drinks</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 gap-col-top">
+                        <div class="thumb">
+                            <a data-cuisine="food" class="thumbnail" href="food_admin.php" title="Food" target="_top"
+                               ua-action="Food" ua-label="Food">
+                                <img src="food.jpg" alt="Food">
+                                <span>Food</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <h3> Name: <?php echo $_POST["name"]; ?><br>
-            E-mail: <?php echo $_POST["email"]; ?>
-
-        </h3>
-
-        <h2>Thank you for your registration .. </h2>
     </section>
-</div>
-
-
-<div class="footer-html"></div>
-<div class="bottom-listings" style="">
-    <div class="" style="text-align: center;"></div>
-</div>
+    <div class="footer-html"></div>
+    <div class="bottom-listings" style="">
+        <div class="" style="text-align: center;"></div>
+    </div>
 </div>
 <footer class>
     <div class="container">
@@ -127,6 +142,5 @@ $email = $_POST["email"];
         </div>
     </div>
 </footer>
-
 </body>
 </html>
